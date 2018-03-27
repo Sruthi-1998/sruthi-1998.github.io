@@ -1,0 +1,148 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+    <head>
+	        <title>CAKEBEE</title>
+			<link rel="manifest" href="/manifest.json">
+			<style>
+			
+			
+			body, html {
+            height: 100%;
+            margin: 0;
+}
+
+.bg {
+    
+    background-image: url("cake.jpeg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+			
+			
+			</style>
+	<script>
+
+function validateForm() {
+var y = document.forms["a"]["mobno"].value;
+var y1 = document.forms["a"]["Name"].value;
+
+
+    if (y == ""||isNaN( document.a.mobno.value )) {
+        alert("Mobile_Number must be filled out!");
+        return false;
+		
+		}
+		
+    if (y1 == "") {
+        alert("Please fill out your name");
+        return false;
+		
+		}
+	
+                  
+	
+	if( document.a.email.value == "" )
+         {
+            alert( "Please fill out your Email!" );
+            return false;
+         }
+
+         
+    if( document.a.caketype.value == "-1" )
+         {
+            alert( "Please fill out the cake type!" );
+            return false;
+         }
+
+	if( document.a.flavors.value == "-1" )
+         {
+            alert( "Please fill out the cake flavor!" );
+            return false;
+         }
+		 else
+         return( true );
+		
+		
+		
+}
+</script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+<div class="bg">
+
+
+		<form name="a" onsubmit="return(validateForm());" method="post" action="1.html">
+            <table align="center">
+			<h1><center><font color="green">CAKEBEE</font></center></h1>
+                <h2><center><font color="pink">ORDERING FORM</font></center></h2>
+                <tr> <td>NAME:</td>
+                    <td><input type="text" name="Name"/></td>
+                </tr>
+                <tr> <td>MOBILE NO:</td>
+                    <td><input type="text" name="mobno" /></td>
+                </tr>
+                <tr> <td>EMAIL ID:</td>
+                    <td><input type="text" name="email"/></td>
+                </tr>
+                <tr>
+                    <td>ADDRESS:</td>
+                    <td>
+                <textarea rows="5" cols="20">Address</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CAKE TYPES:</td>
+                    <td>
+                <select name="caketype">
+				<option value="-1" selected>[choose yours]</option>
+                    <option value="c">EGG</option>
+                    <option value="d">EGGLESS</option>
+                </select>  
+                        </td>
+                        
+            </tr>
+            <tr>
+                <td>FLAVORS:</td>
+                <td> <select name="flavors">
+				<option value="-1" selected>[choose yours]</option>
+                    <option value="f">WHITE FOREST CAKE</option>
+                    <option value="g">BLACK CURRANT CAKE</option>
+                    <option value="f">BLACK FOREST CAKE</option>
+                </select> </td>
+            </tr>
+            <tr>
+                    <td>MESSAGE ON CAKE:</td>
+                    <td>
+                <textarea rows="3" cols="20"></textarea>
+                    </td>
+                </tr>
+            <tr>
+                <td>TYPE OF PAYMENT:</td>
+                <td> 
+                    <input type="radio" name="payment">CASH ON DELIVERY<br>
+                    <input type="radio" name="payment">CREDIT/DEBIT<br>
+                    <input type="radio" name="payment">NET BANKING
+                </td>
+            </tr>
+            <tr>
+
+  <td><input type="reset" value="Reset Form"></td>
+
+  <td colspan="2"><input type="submit" value="Submit"></td>
+
+  </tr>
+            </table>
+           
+     
+        </form>  
+		</div>
+		<script src="cakeweb.js"></script>
+    </body>
+</html>
